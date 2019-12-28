@@ -1,0 +1,41 @@
+,copula_index,copula_name
+0,0,independence copula
+1,1,Gaussian copula
+2,2,Student t copula (t-copula)
+3,3,Clayton copula
+4,4,Gumbel copula
+5,5,Frank copula
+6,6,Joe copula
+7,7,BB1 copula
+8,8,BB6 copula
+9,9,BB7 copula
+10,10,BB8 copula
+11,13,rotated Clayton copula (180 degrees; “survival Clayton”)
+12,14,rotated Gumbel copula (180 degrees; “survival Gumbel”)
+13,16,rotated Joe copula (180 degrees; “survival Joe”)
+14,17,rotated BB1 copula (180 degrees; “survival BB1”)
+15,18,rotated BB6 copula (180 degrees; “survival BB6”)
+16,19,rotated BB7 copula (180 degrees; “survival BB7”)
+17,20,rotated BB8 copula (180 degrees; “survival BB8”)
+18,23,rotated Clayton copula (90 degrees)
+19,24,rotated Gumbel copula (90 degrees)
+20,26,rotated Joe copula (90 degrees)
+21,27,rotated BB1 copula (90 degrees)
+22,28,rotated BB6 copula (90 degrees)
+23,29,rotated BB7 copula (90 degrees)
+24,30,rotated BB8 copula (90 degrees)
+25,33,rotated Clayton copula (270 degrees)
+26,34,rotated Gumbel copula (270 degrees)
+27,36,rotated Joe copula (270 degrees)
+28,37,rotated BB1 copula (270 degrees)
+29,38,rotated BB6 copula (270 degrees)
+30,39,rotated BB7 copula (270 degrees)
+31,40,rotated BB8 copula (270 degrees)
+32,104,Tawn type 1 copula
+33,114,rotated Tawn type 1 copula (180 degrees)
+34,124,rotated Tawn type 1 copula (90 degrees)
+35,134,rotated Tawn type 1 copula (270 degrees)
+36,204,Tawn type 2 copula
+37,214,rotated Tawn type 2 copula (180 degrees)
+38,224,rotated Tawn type 2 copula (90 degrees)
+39,234,rotated Tawn type 2 copula (270 degrees)

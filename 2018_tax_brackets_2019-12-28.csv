@@ -1,0 +1,8 @@
+"","Tax rate","Taxable income bracket","Tax owed","tax_rate","bracket","owed","lower","upper","base"
+"1","10%","$0 to $9,525","10% of taxable income",0.1,"0 to 9525","10% of taxable income",0,9525,NA
+"2","12%","$9,526 to $38,700","$952.50 plus 12% of the amount over $9,525",0.12,"9526 to 38700","952.50 plus 12% of the amount over 9525",9526,38700,952.5
+"3","22%","$38,701 to $82,500","$4,453.50 plus 22% of the amount over $38,700",0.22,"38701 to 82500","4453.50 plus 22% of the amount over 38700",38701,82500,4453.5
+"4","24%","$82,501 to $157,500","$14,089.50 plus 24% of the amount over $82,500",0.24,"82501 to 157500","14089.50 plus 24% of the amount over 82500",82501,157500,14089.5
+"5","32%","$157,501 to $200,000","$32,089.50 plus 32% of the amount over $157,500",0.32,"157501 to 200000","32089.50 plus 32% of the amount over 157500",157501,2e+05,32089.5
+"6","35%","$200,001 to $500,000","$45,689.50 plus 35% of the amount over $200,000",0.35,"200001 to 500000","45689.50 plus 35% of the amount over 200000",200001,5e+05,45689.5
+"7","37%","$500,001 or more","$150,689.50 plus 37% of the amount over $500,000",0.37,"500001 or more","150689.50 plus 37% of the amount over 500000",500001,NA,150689.5
