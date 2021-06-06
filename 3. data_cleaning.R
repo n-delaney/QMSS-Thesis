@@ -7,7 +7,7 @@ library(spatstat)
 ###     IMPORT AND CLEAN 1997 COHORT                                          ###
 #################################################################################
 
-codes_97 <- read.csv('./NLSY97/codes_97.csv')
+codes_97 <- read.csv('./data/NLSY97/codes_97.csv')
 codes_97$year <- as.character(codes_97$year)
 
 data_97$id <- paste0('c97_', data_97$R0000100)
@@ -69,7 +69,7 @@ c97 <- full_join(demog, earnings_df, by = 'id') %>%
   filter(age >= 22) %>% 
   mutate(cohort = '97')
 
-cpi <- read_csv('./CPI_world_bank/CPI_world_bank.csv', skip = 4)
+cpi <- read_csv('./data/CPI_world_bank/CPI_world_bank.csv', skip = 4)
 cpi <- cpi %>% filter(`Country Name` == 'United States')
 nlsy97_years <- unique(c97$year)
 cpi <- cpi[, c(nlsy97_years, 2016, 2017, 2018)] %>% 
@@ -96,14 +96,14 @@ c97 <- real_c97 %>%
          race, earnings, real_ern, emp_stat, 
          sample_wt, cohort) 
 
-write.csv(c97, 'c97.csv')
+write.csv(c97, './data/formatted_NLSY_samples/c97.csv')
 
 
 #################################################################################
 ###     IMPORT AND CLEAN 1979 COHORT                                          ###
 #################################################################################
 
-codes_79 <- read.csv('./NLSY79/codebook_79.csv') %>% select(-X)
+codes_79 <- read.csv('./data/NLSY79/codebook_79.csv') %>% select(-X)
 codes_79 <- codes_79 %>% mutate(var = as.character(var), 
                                 year = as.character(year), 
                                 question = as.character(question), 
@@ -172,7 +172,7 @@ c79 <- full_join(demog, earnings_df, by = 'id') %>%
 
 nlsy79_years <- unique(c79$year)
 
-cpi <- read_csv('./CPI_world_bank/CPI_world_bank.csv', skip = 4)
+cpi <- read_csv('./data/CPI_world_bank/CPI_world_bank.csv', skip = 4)
 
 cpi <- (cpi %>% filter(`Country Name` == 'United States'))[, c(5:ncol(cpi))] %>% 
   melt(variable.name = 'year', value.name = 'CPI_2010') %>% 
@@ -196,7 +196,7 @@ c79 <- real_c79 %>% select(id, # select so that order is standardized with c97
                            race, earnings, real_ern, emp_stat, 
                            sample_wt, cohort)
 
-write.csv(c79, 'c79.csv')
+write.csv(c79, './data/formatted_NLSY_samples/c79.csv')
 
 
 #################################################################################

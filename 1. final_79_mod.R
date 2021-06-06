@@ -2,7 +2,7 @@
 # Set working directory
 # setwd()
 
-data_79 <- read.table('./NLSY79/final_79/final_79.dat', sep=' ')
+data_79 <- read.table('./data/NLSY79/final_79/final_79.dat', sep=' ')
 names(data_79) <- c('R0000100',
                      'R0000300',
                      'R0000500',

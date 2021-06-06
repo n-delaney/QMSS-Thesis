@@ -3,7 +3,7 @@
 # setwd()
 
 
-data_97 <- read.table('./NLSY97/final_97/final_97.dat', sep=' ')
+data_97 <- read.table('./data/NLSY97/final_97/final_97.dat', sep=' ')
 names(data_97) <- c('E0021901',
                      'E0021902',
                      'E0021903',
