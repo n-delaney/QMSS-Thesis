@@ -8,7 +8,7 @@ library(spatstat)
 set.seed(12345)
 
 
-raw_params <- readRDS('copula_params.rds')
+raw_params <- readRDS('./copula_outputs/fitted_copula_params.rds')
 
 #####################################################################
 ###       Turn Raw parameters into smoothed parameters            ###
@@ -35,7 +35,7 @@ for(i in c('female', 'male')){
 smooth_params$female[smooth_params$female$deg_f < 2, 'deg_f'] <- 2.0000001
 smooth_params$male[smooth_params$male$deg_f < 2, 'deg_f'] <- 2.0000001
 
-saveRDS(smooth_params, 'smoothed_params.rds')
+saveRDS(smooth_params, 'copula_outputs/smoothed_params.rds')
 
 for(i in c('female', 'male')){
   p_rho <- ggplot() + 
@@ -110,7 +110,7 @@ for(s in c('female', 'male')){
 ###         Scale to NLSY earnings to evaluate simulations                       ###
 ####################################################################################
 
-nlsy_grads <- readRDS('grads_all_vars.rds')
+nlsy_grads <- readRDS('./formatted_NLSY_samples/grads_all_vars.rds')
 names(nlsy_grads) <- c('female', 'male')
 nlsy_df <- rbind(nlsy_grads$female, nlsy_grads$male)
 
@@ -294,7 +294,7 @@ for(s in c('female', 'male')){
 all_sims <- list(sims, sims_inc_nlsy, sims_inc_asec)
 names(all_sims) <- c('ranks_only', 'nsly', 'asec')
 
-saveRDS(all_sims, 'rank_and_income_simulations.rds')
+saveRDS(all_sims, './copula_outputs/rank_and_income_simulations.rds')
 
 ######################################################################
 ###      Evaluate Simulated CPS (ASEC) earnings fit                ###

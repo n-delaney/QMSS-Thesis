@@ -12,7 +12,7 @@ library(purrr)
 # Read in data
 
 copula_key <- read_csv('copula_key.csv')
-grads_list <- readRDS('grads_all_vars.rds')
+grads_list <- readRDS('./formatted_NLSY_samples/grads_all_vars.rds')
 
 
 # Fit samples
@@ -60,9 +60,9 @@ age_samples_m <- get_samples(grads_list$grads_m)
 
 raw_age_samples <- list(age_samples_f, age_samples_m)
 names(raw_age_samples) <- c('age_samples_f', 'age_samples_m')
-saveRDS(raw_age_samples, 'raw_age_samples.rds')
+saveRDS(raw_age_samples, './copula_age_samples/raw_age_samples.rds')
 
-raw_age_samples <- readRDS('raw_age_samples.rds')
+raw_age_samples <- readRDS('./copula_age_samples/raw_age_samples.rds')
 
 format_age_samples <- function(mylist){
   out <- data.frame()
@@ -200,7 +200,7 @@ params_mf <- rbind(params_f %>% mutate(sex = 'female'),
 params <- list(params_f, params_m, params_mf)
 names(params) <- c('female', 'male', 'all')
 
-saveRDS(params, 'copula_params.rds')
+saveRDS(params, './copula_outputs/fitted_copula_params.rds')
 
 # Plot rho and degrees of freedom (pooling across ages and transitions 1,2 and 2,3)
 

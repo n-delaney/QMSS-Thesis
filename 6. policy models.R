@@ -18,7 +18,7 @@ taxes_18 <- url %>%
          upper = as.numeric(gsub('\\$', '', str_extract(bracket, '\\s(\\d+)'))),
          base = as.numeric(str_extract(owed, '\\d+\\.\\d+')))
 
-write.csv(taxes_18, paste0('2018_tax_brackets_', Sys.Date(), '.csv', row.names = FALSE))
+write.csv(taxes_18, paste0('./data/2018_tax_brackets_', Sys.Date(), '.csv', row.names = FALSE))
 
 taxes_18 <- taxes_18 %>% select(tax_rate, base, lower, upper)
 taxes_18
@@ -26,11 +26,11 @@ taxes_18
 # Import relevant data 
 
 ```{r}
-borrowers <- rbind(readRDS('rank_and_income_simulations.rds')$asec$female, 
-                   readRDS('rank_and_income_simulations.rds')$asec$male)
+borrowers <- rbind(readRDS('./copula_outputs/rank_and_income_simulations.rds')$asec$female, 
+                   readRDS('./copula_outputs/rank_and_income_simulations.rds')$asec$male)
 
 # csv with income tax brackets
-taxes_18 <- read.csv('2018_tax_brackets_2019-12-10.csv')
+taxes_18 <- read.csv('./data/2018_tax_brackets_2019-12-10.csv')
 
 # write function to get value of federal taxes for given earnings 
 get_taxes <- function(x){
