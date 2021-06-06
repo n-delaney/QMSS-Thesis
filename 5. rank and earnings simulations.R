@@ -181,7 +181,7 @@ ggsave(filename = paste0('./Plots/nlsy_vs_sim_earnings_', Sys.Date(), '.png'), w
 ###   Process CPS data and use to scale earnings ranks                           ###
 ####################################################################################
 
-cps <- read.csv('cps_11-12-19.csv') 
+cps <- read.csv('data/asec_cps_files/cps_11-12-19.csv') 
 colnames(cps) <- tolower(colnames(cps))
 
 cps <- cps %>% select(year, sex, age, race, cpsid, incwage, educ, educ99, earnwt, asecwt, wtfinl) %>% 

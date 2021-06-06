@@ -171,37 +171,37 @@ scenarios <- list()
 s_base <- policy_scenario(threshold = 'base', int_rate = 0.045, repay_rate = 0.1, repay_period = 20, cap_times_borrowed = NA)
 print('s_base complete')
 scenarios[['s_base']] <- s_base
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 s2 <- policy_scenario(threshold = 'base', int_rate = 0, repay_rate = 0.1, repay_period = 20, cap_times_borrowed = NA)
 print('s2 complete')
 scenarios[['s2']] <- s2
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 s3 <- policy_scenario(threshold = 30000, int_rate = 0, repay_rate = 0.1, repay_period = 20, cap_times_borrowed = NA)
 print('s3 complete')
 scenarios[['s3']] <- s3
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 s4 <- policy_scenario(threshold = 25000, int_rate = 0, repay_rate = 0.1, repay_period = 25, cap_times_borrowed = NA)
 print('s4 complete')
 scenarios[['s4']] <- s4
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 s5 <- policy_scenario(threshold = 25000, int_rate = 0, repay_rate = 0.03, repay_period = 43, cap_times_borrowed = NA)
 print('s5 complete')
 scenarios[['s5']] <- s5
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 s6 <- policy_scenario(threshold = 30000, int_rate = 0, repay_rate = 0.05, repay_period = 25, cap_times_borrowed = NA)
 print('s6 complete')
 scenarios[['s6']] <- s6
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 s7 <- policy_scenario(threshold = 30000, int_rate = 0, repay_rate = 0.10, repay_period = 25, cap_times_borrowed = 2.5)
 print('s7 complete')
 scenarios[['s7']] <- s7
-saveRDS(scenarios, file = paste0('scenarios_', Sys.Date(), '.rds'))
+saveRDS(scenarios, file = paste0('./copula_outputs/policy_scenarios/scenarios_', Sys.Date(), '.rds'))
 
 
 

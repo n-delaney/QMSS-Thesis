@@ -7,7 +7,7 @@ library(rvest)
 library(stringr)
 library(purrr)
 
-scenarios <- readRDS('scenarios_2019-12-16.rds')
+scenarios <- readRDS('./copula_outputs/policy_scenarios/scenarios_2019-12-16.rds')
 
 
 # Show difference between loan balance and repayments
