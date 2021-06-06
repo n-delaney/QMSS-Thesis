@@ -110,7 +110,7 @@ for(s in c('female', 'male')){
 ###         Scale to NLSY earnings to evaluate simulations                       ###
 ####################################################################################
 
-nlsy_grads <- readRDS('./formatted_NLSY_samples/grads_all_vars.rds')
+nlsy_grads <- readRDS('./data/formatted_NLSY_samples/grads_all_vars.rds')
 names(nlsy_grads) <- c('female', 'male')
 nlsy_df <- rbind(nlsy_grads$female, nlsy_grads$male)
 

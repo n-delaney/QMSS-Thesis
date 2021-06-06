@@ -25,6 +25,4 @@ thesis_theme <- theme_minimal() +
         # legend.title = element_blank()
         )
 
-# t_colors <- c('#F2E204', '#F2CA04', '#726316', '#D8BEBE', '#0C0C0C')
 t_colors <- c('#D83A84', '#0A4272', '#78BFAB', '#F2AE30', '#F24E29') # Adobe Nunheads Festival
-# t_colors <-  c('#F24B59', '#1344A5', '#F2D026', '#F26141', '#F2F2F2')
